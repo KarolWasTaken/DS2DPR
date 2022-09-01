@@ -1,7 +1,8 @@
 
 <p align="center" width="100%">
-    <img width="20%" src="https://cdn.discordapp.com/attachments/467018961259855872/1015043181966000208/ds2logo.png"> 
+    <img width="20%" src="https://cdn.discordapp.com/attachments/467018961259855872/1015045498010349578/github.png"> 
 </p>
+
 
 # DS2DPR
 
