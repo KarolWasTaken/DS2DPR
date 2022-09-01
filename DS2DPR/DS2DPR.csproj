@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <RuntimeIdentifer>win-x64</RuntimeIdentifer>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\DarkSoulsII.jpg" />
+    <None Remove="Resources\darkwood.jpg" />
+    <None Remove="Resources\DS2.jpg" />
+    <None Remove="Resources\ds2logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".github\workflows\deploy-class-commands.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\ds2logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\DarkSoulsII.jpg" />
+    <Resource Include="Resources\DS2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PropertyHook">
+      <HintPath>..\..\PropertyHook\PropertyHook\bin\Debug\PropertyHook.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\darkwood.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\ds2logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+    
+
+
+</Project>

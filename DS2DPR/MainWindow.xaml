@@ -1,0 +1,124 @@
+﻿<Window x:Class="DS2DPR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DS2DPR"
+        mc:Ignorable="d"
+        Title="Dark Souls II: SoTFS DRP" Height="260" Width="460"
+        ResizeMode="CanMinimize"
+        StateChanged="Window_StateChanged"
+        Icon="pack://application:,,,/Resources/ds2logo.png" Closing="Window_Closing">
+    <Grid Background="#5c6bc0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#424642" Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.RowSpan="4"
+                   Grid.ColumnSpan="4"
+                   Height="170"
+                   VerticalAlignment="Bottom"/>
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Grid.RowSpan="2"
+                        Grid.ColumnSpan="2">
+                <TextBlock FontFamily="Latinka-Regular"
+                           FontSize="40"
+                           Margin="0,-10,0,0"
+                           Text="Dark Souls 2 DRP"
+                           Foreground="White"/>
+                <TextBlock FontFamily="Latinka-ExtraLight"
+                           FontSize="17"
+                           Margin="0,0,0,0"
+                           Foreground="#92938e">
+                    Enable and disable your DPR here
+                </TextBlock>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1"
+                        Grid.Row="2">
+
+                <Button Style="{StaticResource ScreenButtonTheme}"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="0,5,0,0"
+                        Width="150"
+                        Height="50"
+                        Content="Connect"
+                        Name="connectbtn"
+                        FontSize="15" Click="connect_ds2"/>
+
+                <Button Style="{StaticResource ScreenButtonTheme}"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Name="drp_btn"
+                        Margin="0,10,0,0"
+                        Width="150"
+                        Height="50"
+                        Content="Enable"
+                        FontSize="15" Click="enable_drp"/>
+
+            </StackPanel>
+            <DockPanel Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"
+                       Margin="10,5,0,0">
+                <Border 
+                    CornerRadius="20"
+                    Width="110"
+                    Height="110"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="0,0,0,0">
+                    <Border.Background>
+                        <ImageBrush Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality"
+                                ImageSource="pack://application:,,,/Resources/DarkSoulsII.jpg">
+                        </ImageBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect
+                            ShadowDepth="3"
+                            Direction="225"
+                            Color="Black"
+                            Opacity="0.35"
+                            BlurRadius="10"/>
+                    </Border.Effect>
+                </Border>
+            <StackPanel>
+                <TextBlock FontFamily="Latinka-Regular"
+                           FontSize="20"
+                           Margin="15,0,0,0"
+                           Text="Dark Souls 2"
+                           Foreground="White"/>
+                <TextBlock FontFamily="Latinka-ExtraLight"
+                               FontSize="13 "
+                               Margin="15,0,0,0"
+                               Foreground="#92938e"
+                               Text="Death #0"
+                               Name="deathText"/>
+                <TextBlock FontFamily="Latinka-ExtraLight"
+                               FontSize="13 "
+                               Margin="15,2,0,0"
+                               Foreground="#92938e"
+                               Name="Timer_label"
+                               Text="00:00:00 elapsed "/>
+            </StackPanel>
+        </DockPanel>
+
+        
+
+
+
+    </Grid>
+</Window>
