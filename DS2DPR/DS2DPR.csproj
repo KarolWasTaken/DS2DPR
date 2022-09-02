@@ -11,6 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove=".github\**" />
+    <EmbeddedResource Remove=".github\**" />
+    <None Remove=".github\**" />
+    <Page Remove=".github\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\DarkSoulsII.jpg" />
     <None Remove="Resources\darkwood.jpg" />
     <None Remove="Resources\DS2.jpg" />
@@ -18,11 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include=".github\workflows\deploy-class-commands.yml" />
+    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
+    <Reference Include="PropertyHook">
+      <HintPath>..\..\..\PropertyHook\PropertyHook\bin\Debug\PropertyHook.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -39,16 +48,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="PropertyHook">
-      <HintPath>..\..\PropertyHook\PropertyHook\bin\Debug\PropertyHook.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Resources\darkwood.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\clearlogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\ds2logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
