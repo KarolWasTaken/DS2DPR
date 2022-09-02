@@ -13,12 +13,14 @@ your toolbar. Very simple to use. Unfortunately, I couldnt get this to work as a
 
 # Screenshots
 
+Time increment is +10 minutes for debug purposes. This isn't present in the release
 
-![screenshot](https://cdn.discordapp.com/attachments/467018961259855872/1015044454010339390/unknown.png)
+![screenshot](https://cdn.discordapp.com/attachments/1015338649388331028/1015358135021608960/NVIDIA_Share_8V2LvSfXGV.gif)
 
-![DRP](https://cdn.discordapp.com/attachments/467018961259855872/1015044604694888538/unknown.png)
+![TrayStoreScreenshot](https://cdn.discordapp.com/attachments/1015338649388331028/1015355583332880394/eZtnyAZYpE.gif)
 
-![TrayStoreScreenshot](https://cdn.discordapp.com/attachments/467018961259855872/1015044666300825731/unknown.png)
+![DRP](https://cdn.discordapp.com/attachments/1015338649388331028/1015357313860784198/NVIDIA_Share_TZLtOsjbP8.gif)
+
 
 
 
