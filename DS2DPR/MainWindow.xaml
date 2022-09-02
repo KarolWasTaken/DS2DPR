@@ -112,7 +112,7 @@
                                Margin="15,2,0,0"
                                Foreground="#92938e"
                                Name="Timer_label"
-                               Text="00:00:00 elapsed "/>
+                               Text="00:00 elapsed "/>
             </StackPanel>
         </DockPanel>
 

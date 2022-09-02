@@ -43,7 +43,7 @@ namespace DS2DPR
             _notifyicon.ContextMenuStrip = new forms.ContextMenuStrip();
             _notifyicon.ContextMenuStrip.Items.Add(new forms.ToolStripLabel("DS2 DPR", System.Drawing.Image.FromFile("Resources/clearlogo.png")));
             _notifyicon.ContextMenuStrip.Items.Add(new forms.ToolStripLabel($"Deaths: {hook.Death}"));
-            _notifyicon.ContextMenuStrip.Items.Add(new forms.ToolStripLabel($"00:00:00 elapsed"));
+            _notifyicon.ContextMenuStrip.Items.Add(new forms.ToolStripLabel($"00:00 elapsed"));
             _notifyicon.ContextMenuStrip.Items.Add("Connect", null, connect_ds2_notif);
             _notifyicon.ContextMenuStrip.Items.Add("Exit", null, OnExitClick);
             _notifyicon.Visible = true;
@@ -92,7 +92,17 @@ namespace DS2DPR
                     {
                         TimeSpan duration = DateTime.Now - _start;
                         var deaths = hook.Death;
-                        string time = duration.ToString(@"hh\:mm\:ss");
+                        string time = duration.ToString(@"mm\:ss");
+
+                        if (duration.TotalMinutes >= 60)
+                        {
+                            time = duration.ToString(@"hh\:mm\:ss");
+                        }
+                        else
+                        {
+                             time = duration.ToString(@"mm\:ss");
+                        }
+
 
                         // updates textblocks
                         deathText.Text = $"Death #{deaths}";
@@ -125,9 +135,9 @@ namespace DS2DPR
                 _notifyicon.ShowBalloonTip(3000, "Disconnected", "Disconnected form your game", forms.ToolTipIcon.Info);
 
                 _notifyicon.ContextMenuStrip.Items[1].Text = $"Deaths: 0";
-                _notifyicon.ContextMenuStrip.Items[2].Text = $"00:00:00 elapsed";
+                _notifyicon.ContextMenuStrip.Items[2].Text = $"00:00 elapsed";
                 deathText.Text = "Death #0";
-                Timer_label.Text = "00:00:00 elapsed";
+                Timer_label.Text = "00:00 elapsed";
 
                 hook.Stop();
                 isConnected = false;
